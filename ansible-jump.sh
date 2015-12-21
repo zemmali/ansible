@@ -10,3 +10,7 @@ echo "192.168.50.41 jump" >> /etc/hosts
 
 #Ansible installation
 apt-get install -y ansible
+
+cp -avr /vagrant/first_playbook /home/vagrant/
+find  /home/vagrant/first_playbook -type d -exec chmod 755 {} \;
+find  /home/vagrant/first_playbook -type f -exec chmod 644 {} \;
