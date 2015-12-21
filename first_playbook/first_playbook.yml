@@ -1,0 +1,17 @@
+- name: Manage Common Items
+  hosts: all
+  remote_user: "{{ remote_user }}"
+  sudo: yes
+
+
+  roles:
+    - { role: common, tags: ['common'] }
+
+- name: Install nginex
+  hosts: web1
+  remote_user: "{{ remote_user }}"
+  sudo: yes
+
+
+  roles:
+    - { role: nginx, tags: ['nginx'] } 

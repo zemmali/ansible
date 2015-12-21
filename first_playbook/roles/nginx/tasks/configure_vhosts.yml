@@ -1,0 +1,12 @@
+- name: Create vhost root
+  file: path="/usr/share/nginx/{{ item.key }}" state=directory owner=root
+  with_dict: virtualhosts
+
+- name: Add Virtual Hosts
+  template: src=vhosts.j2 dest=/etc/nginx/sites-available/{{ item.key }}.conf
+  with_dict: virtualhosts
+
+- name: Add vhost symlink
+  file: src="/etc/nginx/sites-available/{{ item.key }}.conf" dest="/etc/nginx/sites-enabled/{{ item.key }}.conf" state=link
+  with_dict: virtualhosts
+  notify: restart nginx
