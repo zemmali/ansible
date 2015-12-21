@@ -21,5 +21,7 @@ To use ansible playbooks:
 (just to add key to .ssh/known_hosts)
 
 > ansible-playbook -i first_playbook/inventories/dev -K first_playbook/first_playbook.yml -k
-SSH password: vagrant
-SUDO password[defaults to SSH password]: <enter>
+
+>SSH password: vagrant
+
+>SUDO password[defaults to SSH password]: <enter>
