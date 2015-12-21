@@ -31,7 +31,9 @@ Execute below command in /home/vagrant directory:
 playbookscaffold.sh script can be use to deploy folders for ansible from scratch.
 
 vagrant@jump:~$ tree
+
 .
+
 └── first_playbook
 
     ├── files
