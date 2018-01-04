@@ -37,7 +37,8 @@ mkdir -p "${PROJECT_PATH}/host_vars/prd"
 mkdir -p "${PROJECT_PATH}/inventories"
 mkdir -p "${PROJECT_PATH}/roles"
 # Use Ansible galaxy init to create a default 'common' role
-ansible-galaxy init common -p "${PROJECT_PATH}/roles/"
+# ansible-galaxy init common -p "${PROJECT_PATH}/roles/"
+ansible-galaxy init common --init-path=${PROJECT_PATH}/roles/
 touch "${PROJECT_PATH}/inventories/dev"
 touch "${PROJECT_PATH}/inventories/uat"
 touch "${PROJECT_PATH}/inventories/prd"
